@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory</title>
+	<style type="text/css">
+		#form-data > div{
+			margin-bottom: 10px;
+		}
+		#form-data h5{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Inventory App</h1>
+	<section id="form-data">
+		<div>
+			<h5>Products</h5>
+			<input type="text" name="" id="product">
+		</div>
+		<div>
+			<h5>Price</h5>
+			<input type="number" value="0" name="" id="price" onchange="getTotal()">
+		</div>
+		<div>
+			<h5>Quantity</h5>
+			<input type="number" value="0" name="" id="quantity" onchange="getTotal()">
+		</div>
+		<div>
+			<h5>Total Price</h5>
+			<input type="number" value="0" name="" id="total" readonly>
+		</div>
+		<div>
+			<button onclick="addInventory()">Add Record</button>
+		</div>
+	</section>
+	<hr>
+	<section id="data-table">
+		<div>
+			<h1>Added Records</h1>
+			<button onclick="clearButton()">Clear All Data</button>
+			<button onclick="printData()">Print/Download</button>
+		</div>
+		<div id="allInventory">
+		<table width="100%" border="1" id="inventoryTable">
+			<tr>
+				<th>Product</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Total</th>
+				<th>Take Action</th>
+			</tr>
+			
+			<tr>
+				<th colspan="3">
+					Grand Total
+				</th>
+				<td colspan="2" id="grandTotal">0</td>
+			</tr>
+		</table>
+	</div>
+	</section>
+
+
+	<script type="text/javascript" src="inventory.js"></script>
+
+</body>
+</html>
